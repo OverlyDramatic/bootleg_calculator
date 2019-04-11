@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bootleg_Calculator</title>
+    <!-- 清除默认样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="winBtns">
+                <div class="close" title="close">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="maximize" title="maximize">
+                    <span></span>
+                </div>
+                <div class="minimize" title="minimize">
+                    <span></span>
+                </div>
+            </div> 
+            <h1 id="title">Calculator</h1>
+            <!-- #header -->
+        </div>
+        
+        <div id="screen">
+            <nav id="nav">
+                <div id="navHam" class="buttons" title="open navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mode"><span>Standard</span></div>
+                <div id="history" class="buttons">
+                    <img src="img/icon/icon_history.png" alt="history" title="history">
+                    <!-- #history -->
+                </div>
+                <div id="menu">
+                    <dl>
+                        <dt>Calculator</dt>
+                        <dd class="active"><img src="img/icon/icon_standard.png"><span>Standard</span></dd>
+                        <dd><img src="img/icon/icon_scientific.png"><span>Scientific</span></dd>
+                        <dd><img src="img/icon/icon_programmer.png"><span>Programmer</span></dd>
+                        <dd><img src="img/icon/icon_date_calculation.png"><span>Date Calculation</span></dd>
+                        <dt>Converter</dt>
+                        <dd><img src="img/icon/icon_currency.png"><span>Currency</span></dd>
+                        <dd><img src="img/icon/icon_volume.png"><span>Volume</span></dd>
+                        <dd><img src="img/icon/icon_length.png"><span>Length</span></dd>
+                        <dd><img src="img/icon/icon_weight_and_mass.png"><span>Weight and Mass</span></dd>
+                        <dd><img src="img/icon/icon_temperature.png"><span>Temperature</span></dd>
+                        <dd><img src="img/icon/icon_energy.png"><span>Energy</span></dd>
+                        <dd><img src="img/icon/icon_area.png"><span>Area</span></dd>
+                        <dd><img src="img/icon/icon_speed.png"><span>Speed</span></dd>
+                        <dd><img src="img/icon/icon_time.png"><span>Time</span></dd>
+                        <dd><img src="img/icon/icon_power.png"><span>Power</span></dd>
+                        <dd><img src="img/icon/icon_data.png"><span>Data</span></dd>
+                        <dd><img src="img/icon/icon_pressure.png"><span>Pressure</span></dd>
+                        <dd><img src="img/icon/icon_angle.png"><span>Angle</span></dd>
+                    </dl>
+                    <dt id="about"><img src="img/icon/icon_about.png"><span>About</span></dt>
+                </div>
+                <!-- #nav -->
+            </nav>
+
+
+            <!-- <input type="text" id="input"> -->
+
+            <!-- #screen -->
+        </div>
+
+        <!-- standard -->
+        <div id="standard">
+            <div id="buttons">
+                <div id="mBtns"></div>
+                <div id="nums"></div>
+            </div>
+            <!-- #standard -->
+        </div>
+
+        <!-- scientific -->
+        <div id="scientific" style="display:hidden">
+
+            <!-- #scientific -->
+        </div>
+
+        <!-- programmer -->
+        <div id="programmer" style="display:hidden">
+
+            <!-- #programmer -->
+        </div>
+
+        <!-- dateCalculation -->
+        <div id="dateCalculation" style="display:hidden">
+
+            <!-- #dateCalculation -->
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+body{
+    background: #ddd;
+    font-size: 12px;
+    /* 页面内容不被选中 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#outer{
+    width: 320px;
+    height: 500px;
+    background: #1f1f1f;
+    margin: 50px auto;
+    border:solid 1px #707070;
+}
+#header{
+    height: 35px;
+    /* background: #999; */
+}
+#title{
+    color: #fff;
+    line-height: 32px;
+    padding-left: 12px
+}
+
+#winBtns>div{
+    float: right;
+    height: 32px;
+    width: 46px;
+    /* background: #f00; */
+}
+
+#winBtns .maximize:hover,
+#winBtns .minimize:hover{
+    background: #353535;
+}
+
+#winBtns .close:hover{
+    background: #e81123;
+}
+
+.minimize>span{
+    display: block;
+    width: 10px;
+    height: 1px;
+    background: #dcdcdc;
+    margin: 16px auto 15px auto;
+}
+
+.maximize>span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #dcdcdc;
+    margin: 11px auto 11px auto;
+}
+
+.close>span{
+    display: block;
+    width: 14.14px;
+    height: 1px;
+    background: #fff;
+    margin: 12px auto 11px auto;
+}
+.close>span:first-child{
+    transform: rotate(45deg);
+    margin: 15px auto 0 auto;
+}
+.close>span:last-child{
+    transform: rotate(-45deg);
+    margin: -1px auto 0 auto;
+}
+
+#screen{
+    height: 132px;
+    /* background: #999; */
+    position: relative;
+}
+
+#navHam{
+    height: 40px;
+    width: 40px;
+    /* background: #ddd; */
+    /* position: absolute; */
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+/* #navHam:hover{
+    cursor: pointer;
+  } */
+
+#navHam>span{
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #dcdcdc;
+    margin: 0 auto 3px auto;
+    z-index: 1;
+    /* 样式切换动画-兼容 */
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/* 点击动画，样式切换 */
+#navHam.active>span:nth-child(2){
+  opacity: 0;
+}
+#navHam.active>span:nth-child(1){
+    background: #fff;
+    -webkit-transform: translateY(4px) rotate(45deg);
+    -ms-transform: translateY(4px) rotate(45deg);
+    -o-transform: translateY(4px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
+}
+#navHam.active>span:nth-child(3){
+    background: #fff;
+    -webkit-transform: translateY(-4px) rotate(-45deg);
+    -ms-transform: translateY(-4px) rotate(-45deg);
+    -o-transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+#navHam>span:first-child{
+    margin-top: 16px;
+}
+
+#mode{
+    /* width: 239px; */
+    height: 40px;
+    float: left;
+    /* background: #ccc; */
+}
+
+#mode>span{
+    font: 18px/40px sans-serif;
+    color: #fff;
+    padding-left: 11px;
+}
+
+#history{
+    height: 40px;
+    width: 40px;
+    float: right;
+    /* background: #bbb; */
+}
+
+#menu{
+    /* 未点击时不可见 */
+    display: none;
+    clear: both;
+    width: 256px;
+    height: 425px;
+    background: #282828;
+    /* overflow: auto; */
+    color: #fff;
+
+    position: relative;
+    top: -40px;
+    padding-top: 40px;
+
+    z-index: 0;
+    /* transition compatible */
+    transition: width 0.5s;
+    -webkit-transition:width 0.5s;
+}
+
+#menu dl{
+    display: block;
+    height: 348px;
+    overflow: auto;
+    margin-top: 9px;
+    /* padding-top: 40px; */
+    z-index: 0;
+}
+
+/* 滚动条样式 */
+#menu dl::-webkit-scrollbar{
+    width: 2px;
+}
+#menu dl::-webkit-scrollbar-thumb{
+    background: #858585;
+}
+#menu dl::-webkit-scrollbar-thumb:hover{
+    background: #c8c8c8;
+}
+
+/* #menu dl::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    background-color: rosybrown;
+    border-radius: 3px;
+} */
+
+#menu dt{
+    display: block;
+    height: 40px;
+    /* line-height: 40px; */
+    font: bold 13px/40px sans-serif;
+    padding-left: 10px;
+}
+
+#menu dd,
+#about{
+    /* display: block; */
+    height: 38px;
+    border: 1px solid #282828;
+    line-height: 38px;
+    border-right: none;
+}
+#menu dd>span{
+    padding-left: 9px;
+}
+
+#menu dd:hover,
+#about:hover{
+    border: 1px solid #828282;
+    background: #525252;
+}
+
+#menu dd:before{
+    display: inline-block;
+    height: 24px;
+    width: 5px;
+    content: '';
+    position: relative;
+    top: 7px;
+}
+
+#menu dd.active:before{
+    background: #00b294;
+}
+
+#menu img{
+    vertical-align: middle;
+    margin: -3px 0 0 -5px;
+}
+
+#about{
+    margin-top: 20px;
+}
+#about img{
+    margin-left: -10px;
+}
+#about span{
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+#input{
+    display: block;
+    height: 66px;
+    width: 314px;
+    /* background: #ddd; */
+}
+
+.buttons:hover{
+    background: #4c4c4c;
+}
+
