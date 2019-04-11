@@ -1,0 +1,2 @@
+# bootleg_calculator
+基于web前端的复刻win10内置计算器的项目，自家练习用
